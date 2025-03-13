@@ -1,17 +1,13 @@
-//
-//  PersonalLibraryManagerApp.swift
-//  PersonalLibraryManager
-//
-//  Created by mac on 10.03.25.
-//
-
 import SwiftUI
 
 @main
 struct PersonalLibraryManagerApp: App {
+    @StateObject private var libraryData = LibraryData()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environmentObject(libraryData)
         }
     }
 }
