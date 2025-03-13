@@ -3,7 +3,7 @@
 A simple iOS app built with SwiftUI to help you track your books—whether you’re reading, want to read, or have finished reading.  
 
 ## Purpose  
-This app was developed as the **final project** for a **Swift course** organized by **GITA and New Horizons**.  
+This app was developed by **Bitchiko Gularashvili** as the final project for a **Swift course** organized by **GITA and New Horizons**.  
 The course was led by trainer **Emil Atanasov**.  
 
 ## Features  
