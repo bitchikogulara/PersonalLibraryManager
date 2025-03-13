@@ -4,7 +4,7 @@ A simple iOS app built with SwiftUI to help you track your booksâ€”whether youâ€
 
 ## Purpose  
 This app was developed as the **final project** for a **Swift course** organized by **GITA and New Horizons**.  
-The course was led by trainer **Emil Asaturov**.  
+The course was led by trainer **Emil Atanasov**.  
 
 ## Features  
 - Organize books into **Currently Reading, Want to Read, and Read** categories.  
