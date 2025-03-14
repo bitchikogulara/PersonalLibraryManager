@@ -40,15 +40,16 @@ struct BookDetailView: View {
                         .padding()
                 }
                 .frame(maxWidth: .infinity, alignment: .center)
+                
             }
 
-            Section(header: Text("Book Cover")) {
+            Section(header: Text("Book Cover").font(.headline).foregroundColor(.blue)) {
                 Button(selectedUIImage == nil ? "Select Cover Image" : "Change Image") {
                     showingImagePicker = true
                 }
-            }
+            }.padding(5)
 
-            Section(header: Text("Book Info")) {
+            Section(header: Text("Book Info").font(.headline).foregroundColor(.blue)) {
                 TextField("Title", text: $title)
                 TextField("Author", text: $author)
                 Picker("Status", selection: $status) {
@@ -56,29 +57,33 @@ struct BookDetailView: View {
                         Text(status.rawValue).tag(status)
                     }
                 }
-            }
+            }.padding(5)
 
             if status == .reading {
-                Section(header: Text("Reading Progress")) {
+                Section(header: Text("Reading Progress").font(.headline).foregroundColor(.blue)) {
                     Slider(value: $progress, in: 0...1)
-                }
+                }.padding(5)
             }
             
             
             
-            Section(header: Text("Notes")) {
+            Section(header: Text("Notes").font(.headline).foregroundColor(.blue)) {
                 TextEditor(text: $notes)
                     .frame(height: 120)
-            }
+            }.padding(5)
 
             Section {
                 Button("Save Changes") {
                     saveChanges()
                     presentationMode.wrappedValue.dismiss()
                     }
-                }
+                }.foregroundColor(.white)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(title.isEmpty || author.isEmpty ? Color.gray : Color.blue)
+                .cornerRadius(10)
             }
-            .navigationTitle("Edit Book")
+            .navigationTitle("📖 Edit Book")
             .sheet(isPresented: $showingImagePicker) {
                 ImagePicker(selectedImage: $selectedUIImage, sourceType: .photoLibrary)
             }

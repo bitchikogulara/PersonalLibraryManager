@@ -6,6 +6,27 @@ struct RecycleBinView: View {
 
     var body: some View {
         NavigationView {
+            VStack{
+            if !libraryData.deletedBooks.isEmpty {
+                Section {
+                    VStack{
+                        Text("➡️ Swipe right to restore.")
+                            .font(.footnote)
+                            .foregroundColor(.gray)
+                            .multilineTextAlignment(.trailing)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .padding(.vertical, 2)
+                            .padding(.trailing, 75)
+                        Text("⬅️ Swipe left to permanently delete.")
+                            .font(.footnote)
+                            .foregroundColor(.gray)
+                            .multilineTextAlignment(.trailing)
+                            .frame(maxWidth: .infinity, alignment: .trailing)
+                            .padding(.vertical, 2)
+                            .padding(.trailing, 9)
+                    }
+                }
+            }
             List {
                 if libraryData.deletedBooks.isEmpty {
                     Text("Recycle bin is empty.")
@@ -44,13 +65,14 @@ struct RecycleBinView: View {
                 }
             }
             .listStyle(InsetGroupedListStyle())
-            .navigationTitle("Recycle Bin")
+            .navigationTitle("🗑️ Recycle Bin")
             .toolbar  {
                     Button("Close") {
                         presentationMode.wrappedValue.dismiss()
                     }
             }
             
+        }
         }
     }
 
