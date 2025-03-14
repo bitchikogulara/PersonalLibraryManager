@@ -44,6 +44,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		042C84372D849D43002FD434 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				04AA9BA92D82349800184EA4 /* ImagePicker.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		042C84382D849DFF002FD434 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				04FC8CCD2D7F764300FBC1CA /* Book.swift */,
+				04FC8CCF2D7F77AE00FBC1CA /* LibraryData.swift */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
 		04AA9BAB2D8297F500184EA4 /* views */ = {
 			isa = PBXGroup;
 			children = (
@@ -52,16 +69,6 @@
 				04FC8CD32D7F7FF500FBC1CA /* BookDetailView.swift */,
 			);
 			path = views;
-			sourceTree = "<group>";
-		};
-		04AA9BAC2D82981000184EA4 /* files */ = {
-			isa = PBXGroup;
-			children = (
-				04FC8CCD2D7F764300FBC1CA /* Book.swift */,
-				04FC8CCF2D7F77AE00FBC1CA /* LibraryData.swift */,
-				04AA9BA92D82349800184EA4 /* ImagePicker.swift */,
-			);
-			path = files;
 			sourceTree = "<group>";
 		};
 		04FC8CB32D7F759300FBC1CA = {
@@ -85,8 +92,9 @@
 			children = (
 				04FC8CBF2D7F759300FBC1CA /* PersonalLibraryManagerApp.swift */,
 				04FC8CC12D7F759300FBC1CA /* ContentView.swift */,
+				042C84372D849D43002FD434 /* utils */,
 				04AA9BAB2D8297F500184EA4 /* views */,
-				04AA9BAC2D82981000184EA4 /* files */,
+				042C84382D849DFF002FD434 /* models */,
 				04FC8CC32D7F759500FBC1CA /* Assets.xcassets */,
 				04FC8CC52D7F759500FBC1CA /* Preview Content */,
 			);
